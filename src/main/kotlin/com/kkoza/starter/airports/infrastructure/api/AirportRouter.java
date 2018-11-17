@@ -24,4 +24,12 @@ public class AirportRouter {
         );
     }
 
+    @Bean
+    RouterFunction<ServerResponse> getAirports() {
+        return RouterFunctions.route(
+                RequestPredicates.GET("/airports"),
+                airportHandler::getAirports
+        );
+    }
+
 }

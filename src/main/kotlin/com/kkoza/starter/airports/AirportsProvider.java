@@ -2,6 +2,7 @@ package com.kkoza.starter.airports;
 
 import com.kkoza.starter.airports.infrastructure.AirportProvider;
 import org.springframework.stereotype.Component;
+import reactor.core.publisher.Flux;
 
 @Component
 public class AirportsProvider {
@@ -10,5 +11,9 @@ public class AirportsProvider {
 
     public AirportsProvider(AirportProvider airportProvider) {
         this.airportProvider = airportProvider;
+    }
+
+    public Flux<Airport> getAllAirports() {
+        return airportProvider.getAllAirports();
     }
 }

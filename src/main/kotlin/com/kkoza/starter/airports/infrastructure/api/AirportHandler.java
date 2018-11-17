@@ -43,12 +43,29 @@ public class AirportHandler {
     }
 
     @NotNull
+    Mono<ServerResponse> getAirports(ServerRequest request) {
+        Mono<List<AirportDto>> airportsDto = airportsProvider.getAllAirports()
+                .map(this::mapToAirportDto)
+                .collectList();
+
+        Mono<AirportResponse> airports = airportsDto.map(this::mapToAirportResponse);
+        return ServerResponse
+                .ok()
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(BodyInserters.fromPublisher(airports, AirportResponse.class));
+    }
+
+    @NotNull
     private String getQueryParamFromRequest(ServerRequest request, String departureAirportParam) {
         return request.queryParam(departureAirportParam).get();
     }
 
     private ConnectionsResponse mapToAirportResponse(List<AirportDto> connections, String departure, String destination) {
         return new ConnectionsResponse(departure, destination, connections);
+    }
+
+    private AirportResponse mapToAirportResponse(List<AirportDto> airports) {
+        return new AirportResponse(airports);
     }
 
     private AirportDto mapToAirportDto(Airport airport) {
