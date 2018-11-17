@@ -55,6 +55,7 @@ dependencies {
 	compile group: 'org.yaml', name: 'snakeyaml', version: '1.19'
 	compile group: 'com.google.guava', name: 'guava', version: '23.0'
 	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
+	compile group: 'org.apache.commons', name: 'commons-collections4', version: '4.2'
 
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	testCompile('io.projectreactor:reactor-test')
