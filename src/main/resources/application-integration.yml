@@ -1,3 +1,2 @@
-local:
-  server:
-    port: 8080
+ryanair:
+  url: 'http://localhost:8089'

@@ -1,4 +1,4 @@
-package com.kkoza.starter.airports.infrastructure.api
+package com.kkoza.starter.airports.infrastructure.api.dto
 
 data class ConnectionsResponse(
         val firstIata: String,

@@ -3,6 +3,7 @@ package com.kkoza.starter
 import com.github.tomakehurst.wiremock.junit.WireMockRule
 import org.junit.Rule
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.beans.factory.annotation.Value
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.boot.web.server.LocalServerPort
 import org.springframework.http.HttpHeaders
@@ -37,7 +38,7 @@ class BaseIntegrationTest extends Specification {
 
     def stubRyanairConnectionsForIata(String iataCode, String bodyFile) {
         ryanairRule.stubFor(
-                get(urlPathMatching('/https://api.ryanair.com/farefinder/3/oneWayFares'))
+                get(urlPathMatching('/farefinder/3/oneWayFares'))
                         .withQueryParam('departureAirportIataCode', equalTo(iataCode))
                         .willReturn(
                         aResponse()
@@ -49,7 +50,7 @@ class BaseIntegrationTest extends Specification {
 
     def stubRyanairAirports(String bodyFile) {
         ryanairRule.stubFor(
-                get(urlPathMatching('https://api.ryanair.com/aggregate/4/common'))
+                get(urlPathMatching('/aggregate/4/common'))
                         .willReturn(
                         aResponse()
                                 .withStatus(200)

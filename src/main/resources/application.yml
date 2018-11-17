@@ -1,2 +1,5 @@
 application:
   name: starter
+
+ryanair:
+  url: 'https://api.ryanair.com'

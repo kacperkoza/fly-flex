@@ -1,6 +1,8 @@
 package com.kkoza.starter.airports.infrastructure.api
 
 import com.kkoza.starter.BaseIntegrationTest
+import com.kkoza.starter.airports.infrastructure.api.dto.AirportResponse
+import com.kkoza.starter.airports.infrastructure.api.dto.ConnectionsResponse
 
 class AirportRouterTest extends BaseIntegrationTest {
 
