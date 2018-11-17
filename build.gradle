@@ -61,4 +61,5 @@ dependencies {
 	testCompile('io.projectreactor:reactor-test')
 	testCompile 'org.spockframework:spock-spring:1.0-groovy-2.4'
 	testCompile('cglib:cglib-nodep:3.2.2')
+	testCompile "com.github.tomakehurst:wiremock:2.19.0"
 }

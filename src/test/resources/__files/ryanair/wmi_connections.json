@@ -1,0 +1,1627 @@
+{
+  "total": 45,
+  "arrivalAirportCategories": null,
+  "fares": [
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "TRF",
+          "name": "Oslo-Torp",
+          "seoName": "oslo-torp",
+          "countryName": "Norwegia"
+        },
+        "departureDate": "2018-12-01T18:35:00",
+        "arrivalDate": "2018-12-01T20:35:00",
+        "price": {
+          "value": 23.51,
+          "valueMainUnit": "23",
+          "valueFractionalUnit": "51",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NNMST~NMST~~0~1~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 23.51,
+          "valueMainUnit": "23",
+          "valueFractionalUnit": "51",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "ALC",
+          "name": "Alicante",
+          "seoName": "alicante",
+          "countryName": "Hiszpania"
+        },
+        "departureDate": "2018-12-15T10:45:00",
+        "arrivalDate": "2018-12-15T14:20:00",
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NDECDROP~ACZL~~0~8~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "ATH",
+          "name": "Ateny",
+          "seoName": "ateny",
+          "countryName": "Grecja"
+        },
+        "departureDate": "2018-12-05T20:15:00",
+        "arrivalDate": "2018-12-05T23:55:00",
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NDECDROP~ACZL~~0~8~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "BCN",
+          "name": "Barcelona-El Prat",
+          "seoName": "barcelona-el-prat",
+          "countryName": "Hiszpania"
+        },
+        "departureDate": "2018-12-11T19:55:00",
+        "arrivalDate": "2018-12-11T23:05:00",
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NDECDROP~ACZL~~0~8~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "BFS",
+          "name": "Belfast-International",
+          "seoName": "belfast-international",
+          "countryName": "Wielka Brytania"
+        },
+        "departureDate": "2018-12-05T06:15:00",
+        "arrivalDate": "2018-12-05T08:20:00",
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NZ999DC~FDDG~~0~6~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "BHX",
+          "name": "Birmingham",
+          "seoName": "birmingham",
+          "countryName": "Wielka Brytania"
+        },
+        "departureDate": "2018-12-07T18:05:00",
+        "arrivalDate": "2018-12-07T19:50:00",
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NDECDROP~ACZL~~0~8~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "BLQ",
+          "name": "Bolonia",
+          "seoName": "bolonia",
+          "countryName": "Włochy"
+        },
+        "departureDate": "2018-12-05T13:25:00",
+        "arrivalDate": "2018-12-05T15:30:00",
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NDECDROP~ACZL~~0~6~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "CRL",
+          "name": "Bruksela-Charleroi",
+          "seoName": "bruksela-charleroi",
+          "countryName": "Belgia"
+        },
+        "departureDate": "2018-12-01T20:25:00",
+        "arrivalDate": "2018-12-01T22:35:00",
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NZ999DC~FDDG~~0~14~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "CAG",
+          "name": "Cagliari",
+          "seoName": "cagliari",
+          "countryName": "Włochy"
+        },
+        "departureDate": "2018-12-01T07:15:00",
+        "arrivalDate": "2018-12-01T09:50:00",
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NDECDROP~ACZL~~0~8~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "EMA",
+          "name": "East Midlands",
+          "seoName": "east-midlands",
+          "countryName": "Wielka Brytania"
+        },
+        "departureDate": "2018-12-04T11:10:00",
+        "arrivalDate": "2018-12-04T12:55:00",
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NDECDROP~ACZL~~0~6~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "VDA",
+          "name": "Eilat (Ovda)",
+          "seoName": "eilat-ovda",
+          "countryName": "Izrael"
+        },
+        "departureDate": "2018-11-22T14:50:00",
+        "arrivalDate": "2018-11-22T19:55:00",
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NZ999NV~FAAA~~0~10~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "EIN",
+          "name": "Eindhoven",
+          "seoName": "eindhoven",
+          "countryName": "Holandia"
+        },
+        "departureDate": "2018-12-05T08:15:00",
+        "arrivalDate": "2018-12-05T10:20:00",
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NZ999DC~FDDG~~0~10~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "GOT",
+          "name": "Göteborg-Landvetter",
+          "seoName": "gothenburg-landvetter",
+          "countryName": "Szwecja"
+        },
+        "departureDate": "2018-12-07T13:20:00",
+        "arrivalDate": "2018-12-07T14:55:00",
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NZ999DC~FDDG~~0~15~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "FKB",
+          "name": "Karlsruhe / Baden-Baden",
+          "seoName": "karlsruhe-baden",
+          "countryName": "Niemcy"
+        },
+        "departureDate": "2018-11-30T06:30:00",
+        "arrivalDate": "2018-11-30T08:25:00",
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NZ999NV~FAAA~~0~2~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "KBP",
+          "name": "Kijów-Boryspol",
+          "seoName": "kyiv-boryspil",
+          "countryName": "Ukraina"
+        },
+        "departureDate": "2018-12-02T12:45:00",
+        "arrivalDate": "2018-12-02T15:25:00",
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NDECDROP~ACZL~~0~8~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "CGN",
+          "name": "Kolonia",
+          "seoName": "cologne-bonn",
+          "countryName": "Niemcy"
+        },
+        "departureDate": "2018-12-05T22:05:00",
+        "arrivalDate": "2018-12-05T23:59:00",
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NDECDROP~ACZL~~0~8~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "LBA",
+          "name": "Leeds/Bradford",
+          "seoName": "leeds",
+          "countryName": "Wielka Brytania"
+        },
+        "departureDate": "2018-12-05T20:15:00",
+        "arrivalDate": "2018-12-05T21:55:00",
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NDECDROP~ACZL~~0~8~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "LPL",
+          "name": "Liverpool",
+          "seoName": "liverpool",
+          "countryName": "Wielka Brytania"
+        },
+        "departureDate": "2018-12-07T10:45:00",
+        "arrivalDate": "2018-12-07T12:35:00",
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NDECDROP~ACZL~~0~8~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "STN",
+          "name": "Londyn-Stansted",
+          "seoName": "londyn-stansted",
+          "countryName": "Wielka Brytania"
+        },
+        "departureDate": "2018-12-03T17:55:00",
+        "arrivalDate": "2018-12-03T19:35:00",
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NDECDROP~ACZL~~0~8~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "BGY",
+          "name": "Mediolan-Bergamo",
+          "seoName": "mediolan-bergamo",
+          "countryName": "Włochy"
+        },
+        "departureDate": "2018-12-04T19:40:00",
+        "arrivalDate": "2018-12-04T21:50:00",
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NDECDROP~ACZL~~0~6~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "FMM",
+          "name": "Memmingen",
+          "seoName": "monachium-memmingen",
+          "countryName": "Niemcy"
+        },
+        "departureDate": "2018-11-26T15:25:00",
+        "arrivalDate": "2018-11-26T17:10:00",
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NZ999NV~FAAA~~0~4~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "NAP",
+          "name": "Neapol",
+          "seoName": "neapol",
+          "countryName": "Włochy"
+        },
+        "departureDate": "2018-12-02T06:30:00",
+        "arrivalDate": "2018-12-02T08:50:00",
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NZ999DC~FDDG~~0~4~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "NCL",
+          "name": "Newcastle",
+          "seoName": "newcastle",
+          "countryName": "Wielka Brytania"
+        },
+        "departureDate": "2018-12-04T07:30:00",
+        "arrivalDate": "2018-12-04T09:10:00",
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NDECDROP~ACZL~~0~8~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "PMI",
+          "name": "Palma",
+          "seoName": "palma-de-mallorca",
+          "countryName": "Hiszpania"
+        },
+        "departureDate": "2018-12-02T07:20:00",
+        "arrivalDate": "2018-12-02T10:30:00",
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NZ999DC~FDDG~~0~4~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "BVA",
+          "name": "Paryż-Beauvais",
+          "seoName": "paryz-beauvais",
+          "countryName": "Francja"
+        },
+        "departureDate": "2018-12-08T13:10:00",
+        "arrivalDate": "2018-12-08T15:30:00",
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NDECDROP~ACZL~~0~8~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "CIA",
+          "name": "Rzym-Ciampino",
+          "seoName": "rzym-ciampino",
+          "countryName": "Włochy"
+        },
+        "departureDate": "2018-12-03T09:30:00",
+        "arrivalDate": "2018-12-03T11:45:00",
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NDECDROP~ACZL~~0~8~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "NYO",
+          "name": "Sztokholm-Skavsta",
+          "seoName": "sztokholm-skavsta",
+          "countryName": "Szwecja"
+        },
+        "departureDate": "2018-11-27T12:35:00",
+        "arrivalDate": "2018-11-27T14:10:00",
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NZ999NV~FAAA~~0~17~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "TSF",
+          "name": "Wenecja-Treviso",
+          "seoName": "wenecja-treviso",
+          "countryName": "Włochy"
+        },
+        "departureDate": "2018-12-14T11:20:00",
+        "arrivalDate": "2018-12-14T13:10:00",
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NZ999DC~FDDG~~0~10~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 37.24,
+          "valueMainUnit": "37",
+          "valueFractionalUnit": "24",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "SKG",
+          "name": "Saloniki",
+          "seoName": "saloniki",
+          "countryName": "Grecja"
+        },
+        "departureDate": "2019-02-01T08:40:00",
+        "arrivalDate": "2019-02-01T11:55:00",
+        "price": {
+          "value": 53.9,
+          "valueMainUnit": "53",
+          "valueFractionalUnit": "90",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NZ1299FB~FCCQ~~0~2~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 53.9,
+          "valueMainUnit": "53",
+          "valueFractionalUnit": "90",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "SNN",
+          "name": "Shannon",
+          "seoName": "shannon",
+          "countryName": "Irlandia"
+        },
+        "departureDate": "2018-12-09T20:25:00",
+        "arrivalDate": "2018-12-09T22:45:00",
+        "price": {
+          "value": 53.9,
+          "valueMainUnit": "53",
+          "valueFractionalUnit": "90",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NDECDROP~ACZL~~0~8~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 53.9,
+          "valueMainUnit": "53",
+          "valueFractionalUnit": "90",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "VLC",
+          "name": "Walencja",
+          "seoName": "walencja",
+          "countryName": "Hiszpania"
+        },
+        "departureDate": "2018-12-03T07:10:00",
+        "arrivalDate": "2018-12-03T10:35:00",
+        "price": {
+          "value": 53.9,
+          "valueMainUnit": "53",
+          "valueFractionalUnit": "90",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NDECDROP~ACZL~~0~8~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 53.9,
+          "valueMainUnit": "53",
+          "valueFractionalUnit": "90",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "AMM",
+          "name": "Amman Jordan",
+          "seoName": "amman",
+          "countryName": "Jordania"
+        },
+        "departureDate": "2018-12-03T14:45:00",
+        "arrivalDate": "2018-12-03T19:45:00",
+        "price": {
+          "value": 62.73,
+          "valueMainUnit": "62",
+          "valueFractionalUnit": "73",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NDECDROP~ACZL~~0~8~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 62.73,
+          "valueMainUnit": "62",
+          "valueFractionalUnit": "73",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "BRS",
+          "name": "Bristol",
+          "seoName": "bristol",
+          "countryName": "Wielka Brytania"
+        },
+        "departureDate": "2018-12-08T21:15:00",
+        "arrivalDate": "2018-12-08T23:05:00",
+        "price": {
+          "value": 62.73,
+          "valueMainUnit": "62",
+          "valueFractionalUnit": "73",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NDECDROP~ACZL~~0~8~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 62.73,
+          "valueMainUnit": "62",
+          "valueFractionalUnit": "73",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "EDI",
+          "name": "Edynburg",
+          "seoName": "edynburg",
+          "countryName": "Wielka Brytania"
+        },
+        "departureDate": "2019-02-26T17:05:00",
+        "arrivalDate": "2019-02-26T18:55:00",
+        "price": {
+          "value": 62.73,
+          "valueMainUnit": "62",
+          "valueFractionalUnit": "73",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NZ1499FB~FCCR~~0~4~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 62.73,
+          "valueMainUnit": "62",
+          "valueFractionalUnit": "73",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "MAD",
+          "name": "Madryt",
+          "seoName": "madryt",
+          "countryName": "Hiszpania"
+        },
+        "departureDate": "2018-12-01T20:10:00",
+        "arrivalDate": "2018-12-01T23:50:00",
+        "price": {
+          "value": 62.73,
+          "valueMainUnit": "62",
+          "valueFractionalUnit": "73",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NDECDROP~ACZL~~0~8~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 62.73,
+          "valueMainUnit": "62",
+          "valueFractionalUnit": "73",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "AGP",
+          "name": "Malaga",
+          "seoName": "malaga",
+          "countryName": "Hiszpania"
+        },
+        "departureDate": "2018-12-01T18:55:00",
+        "arrivalDate": "2018-12-01T22:55:00",
+        "price": {
+          "value": 62.73,
+          "valueMainUnit": "62",
+          "valueFractionalUnit": "73",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NDECDROP~ACZL~~0~8~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 62.73,
+          "valueMainUnit": "62",
+          "valueFractionalUnit": "73",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "MAN",
+          "name": "Manchester",
+          "seoName": "manchester",
+          "countryName": "Wielka Brytania"
+        },
+        "departureDate": "2019-01-15T07:00:00",
+        "arrivalDate": "2019-01-15T08:50:00",
+        "price": {
+          "value": 62.73,
+          "valueMainUnit": "62",
+          "valueFractionalUnit": "73",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NZ1499JN~FCCH~~0~4~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 62.73,
+          "valueMainUnit": "62",
+          "valueFractionalUnit": "73",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "SVQ",
+          "name": "Sewilla",
+          "seoName": "sewilla",
+          "countryName": "Hiszpania"
+        },
+        "departureDate": "2018-12-04T14:00:00",
+        "arrivalDate": "2018-12-04T17:55:00",
+        "price": {
+          "value": 62.73,
+          "valueMainUnit": "62",
+          "valueFractionalUnit": "73",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NDECDROP~ACZL~~0~10~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 62.73,
+          "valueMainUnit": "62",
+          "valueFractionalUnit": "73",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "OPO",
+          "name": "Porto",
+          "seoName": "porto",
+          "countryName": "Portugalia"
+        },
+        "departureDate": "2019-02-06T14:55:00",
+        "arrivalDate": "2019-02-06T17:45:00",
+        "price": {
+          "value": 69.59,
+          "valueMainUnit": "69",
+          "valueFractionalUnit": "59",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NZ1699FB~FCCS~~0~4~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 69.59,
+          "valueMainUnit": "69",
+          "valueFractionalUnit": "59",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "LWO",
+          "name": "Lwów",
+          "seoName": "lviv",
+          "countryName": "Ukraina"
+        },
+        "departureDate": "2018-12-05T07:10:00",
+        "arrivalDate": "2018-12-05T09:15:00",
+        "price": {
+          "value": 74.25,
+          "valueMainUnit": "74",
+          "valueFractionalUnit": "25",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~T~ ~FR~TLDIS~ZZZY~~0~6~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 74.25,
+          "valueMainUnit": "74",
+          "valueFractionalUnit": "25",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "DUB",
+          "name": "Dublin",
+          "seoName": "dublin",
+          "countryName": "Irlandia"
+        },
+        "departureDate": "2018-12-12T13:50:00",
+        "arrivalDate": "2018-12-12T15:50:00",
+        "price": {
+          "value": 82.33,
+          "valueMainUnit": "82",
+          "valueFractionalUnit": "33",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~N~ ~FR~NDECDROP~ACZL~~0~8~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 82.33,
+          "valueMainUnit": "82",
+          "valueFractionalUnit": "33",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "LIS",
+          "name": "Lisbon",
+          "seoName": "lisbon",
+          "countryName": "Portugalia"
+        },
+        "departureDate": "2019-02-04T12:10:00",
+        "arrivalDate": "2019-02-04T15:25:00",
+        "price": {
+          "value": 83.33,
+          "valueMainUnit": "83",
+          "valueFractionalUnit": "33",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~M~ ~FR~MZ1999FB~FCCT~~0~4~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 83.33,
+          "valueMainUnit": "83",
+          "valueFractionalUnit": "33",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "RMI",
+          "name": "Rimini",
+          "seoName": "rimini",
+          "countryName": "Włochy"
+        },
+        "departureDate": "2019-04-01T06:55:00",
+        "arrivalDate": "2019-04-01T08:55:00",
+        "price": {
+          "value": 129,
+          "valueMainUnit": "129",
+          "valueFractionalUnit": "00",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~T~ ~FR~TZ9LOW~BND9~~0~2~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 129,
+          "valueMainUnit": "129",
+          "valueFractionalUnit": "00",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "LPA",
+          "name": "Gran Canaria",
+          "seoName": "gran-canaria",
+          "countryName": "Hiszpania"
+        },
+        "departureDate": "2019-02-23T18:05:00",
+        "arrivalDate": "2019-02-23T22:55:00",
+        "price": {
+          "value": 141.18,
+          "valueMainUnit": "141",
+          "valueFractionalUnit": "18",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~M~ ~FR~MZ3399FB~FCCX~~0~2~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 141.18,
+          "valueMainUnit": "141",
+          "valueFractionalUnit": "18",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    },
+    {
+      "outbound": {
+        "departureAirport": {
+          "iataCode": "WMI",
+          "name": "Warszawa-Modlin",
+          "seoName": "warsaw-modlin",
+          "countryName": "Polska"
+        },
+        "arrivalAirport": {
+          "iataCode": "GLA",
+          "name": "Glasgow",
+          "seoName": "glasgow",
+          "countryName": "Wielka Brytania"
+        },
+        "departureDate": "2019-06-07T17:15:00",
+        "arrivalDate": "2019-06-07T19:00:00",
+        "price": {
+          "value": 149,
+          "valueMainUnit": "149",
+          "valueFractionalUnit": "00",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "sellKey": "0~A~ ~FR~AZ4LOW~BND4~~0~2~~X"
+      },
+      "summary": {
+        "price": {
+          "value": 149,
+          "valueMainUnit": "149",
+          "valueFractionalUnit": "00",
+          "currencyCode": "PLN",
+          "currencySymbol": "zł"
+        },
+        "newRoute": false
+      }
+    }
+  ],
+  "size": 45
+}
