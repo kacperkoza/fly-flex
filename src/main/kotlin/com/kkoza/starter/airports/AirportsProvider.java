@@ -11,9 +11,12 @@ import java.util.List;
 public class AirportsProvider {
 
     private final ConnectionsProvider connectionsProvider;
+    private final AirportProvider airportProvider;
 
-    public AirportsProvider(ConnectionsProvider connectionsProvider) {
+    public AirportsProvider(ConnectionsProvider connectionsProvider,
+                            AirportProvider airportProvider) {
         this.connectionsProvider = connectionsProvider;
+        this.airportProvider = airportProvider;
     }
 
     public Flux<Airport> getConnections(String departure, String destination) {
@@ -34,6 +37,6 @@ public class AirportsProvider {
     }
 
     public Flux<Airport> getAllAirports() {
-        return Flux.empty();
+        return airportProvider.getAllAirports();
     }
 }
