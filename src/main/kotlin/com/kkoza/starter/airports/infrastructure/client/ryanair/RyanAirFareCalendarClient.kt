@@ -10,7 +10,7 @@ import reactor.core.publisher.Mono
 
 class RyanAirFareCalendarClient(
         private val ryanAirClient: RyanAirClient,
-        private val url: String
+        url: String
 ) : FareCalendarClient {
     private val path = "$url/farefinder/3/oneWayFares"
 
@@ -19,7 +19,7 @@ class RyanAirFareCalendarClient(
     }
 
     override fun getFareCalendar(departureIata: String, arrivalIata: String): Mono<FareCalendar> {
-        val finalPath = "$path/$departureIata/$arrivalIata${BASE_PARAMS}2018-11-01"
+        val finalPath = "$path/$departureIata/$arrivalIata$BASE_PARAMS${DateTime.now().plusMonths(1).toString("yyyy-MM-dd")}"
         return ryanAirClient
                 .requestMono(finalPath,
                         ResponseDto::class.java)

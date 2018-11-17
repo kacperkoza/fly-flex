@@ -1,34 +1,32 @@
 package com.kkoza.starter.airports.infrastructure.api.dto
 
-import com.fasterxml.jackson.annotation.JsonProperty
-
 data class RouteResponse(
-    val routes: List<Route>
+    val routes: List<RouteDto>
 )
 
-data class Route(
-        val firstOutbound: RoutePlan,
-        val secondOutbound: RoutePlan
+data class RouteDto(
+        val firstOutbound: RoutePlanDto,
+        val secondOutbound: RoutePlanDto
 )
 
-data class RoutePlan(
-        val departureAirport: Airport,
-        val arrivalAirport: Airport,
-        val date: FlightDates,
-        val price: FlightPrice
+data class RoutePlanDto(
+        val departureAirport: AirportPlanDto,
+        val arrivalAirport: AirportPlanDto,
+        val date: FlightDatesDto,
+        val price: FlightPriceDto
 )
 
-data class Airport(
+data class AirportPlanDto(
         val iataCode: String,
         val name: String
 )
 
-data class FlightDates(
+data class FlightDatesDto(
         val departure: String,
-        @JsonProperty("return") val returnWay: String
+        val returnWay: String
 )
 
-data class FlightPrice(
-        val oneWay: Double,
-        @JsonProperty("return") val returnWay: Double
+data class FlightPriceDto(
+        val oneWay: Int,
+        val returnWay: Int
 )

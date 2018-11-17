@@ -3,10 +3,9 @@ package com.kkoza.starter.airports.infrastructure.api
 import com.kkoza.starter.airports.Airport
 
 import com.kkoza.starter.airports.FlightFacade
-import com.kkoza.starter.airports.infrastructure.api.dto.AirportDto
-import com.kkoza.starter.airports.infrastructure.api.dto.AirportResponse
-import com.kkoza.starter.airports.infrastructure.api.dto.ConnectionsResponse
-import com.kkoza.starter.airports.infrastructure.api.dto.RouteResponse
+import com.kkoza.starter.airports.Routes
+import com.kkoza.starter.airports.infrastructure.api.dto.*
+import org.joda.time.DateTime
 import org.springframework.http.MediaType
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.BodyInserters
@@ -55,7 +54,7 @@ class FlightHandler(private val flightFacade: FlightFacade) {
         val destinationIata = getQueryParamFromRequest(request, DESTINATION_IATA_PARAM)
 
         val routes = flightFacade.findRoutes(firstIata, secondIata, destinationIata)
-                .map { this.mapToRoutes()!! }
+                .map { this.mapToRoutes(it) }
 
         return ServerResponse
                 .ok()
@@ -65,9 +64,36 @@ class FlightHandler(private val flightFacade: FlightFacade) {
                         RouteResponse::class.java))
     }
 
-    private fun mapToRoutes(): RouteResponse? {
-        return null
+    private fun mapToRoutes(routes: Routes): RouteResponse {
+        val departureAirport = mapToAirportDTO(routes.firstRoundTrip.departureAirport)
+        val secondDepartureAirport = mapToAirportDTO(routes.secondRoundTrip.departureAirport)
+        val mutualArrivalAirport = mapToAirportDTO(routes.firstRoundTrip.arrivalAirport)
+
+        val secondFlights = routes.secondRoundTrip.flights
+        val routesDtos = routes.firstRoundTrip.flights.mapIndexed { index, roundTrip ->
+            val secondTrip = secondFlights[index]
+            RouteDto(
+                    RoutePlanDto(
+                            departureAirport,
+                            mutualArrivalAirport,
+                            FlightDatesDto(formatDate(roundTrip.oneWay.date), formatDate(roundTrip.returnWay.date)),
+                            FlightPriceDto(roundTrip.oneWay.price!!, roundTrip.returnWay.price!!)),
+                    RoutePlanDto(
+                            secondDepartureAirport,
+                            mutualArrivalAirport,
+                            FlightDatesDto(formatDate(secondTrip.oneWay.date), formatDate(secondTrip.returnWay.date)),
+                            FlightPriceDto(secondTrip.oneWay.price!!, secondTrip.returnWay.price!!)
+                    )
+
+            )
+        }
+        return RouteResponse(routesDtos)
     }
+
+    private fun formatDate(date: DateTime) = date.toString("dd-MM-yyyy")
+
+    private fun mapToAirportDTO(airport: Airport): AirportPlanDto = AirportPlanDto(airport.cityName, airport.iataCode)
+
 
     private fun getQueryParamFromRequest(request: ServerRequest, departureAirportParam: String): String {
         return request.queryParam(departureAirportParam).get()
