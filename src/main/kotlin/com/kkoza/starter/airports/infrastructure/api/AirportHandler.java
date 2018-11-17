@@ -15,8 +15,8 @@ import java.util.List;
 @Component
 public class AirportHandler {
 
-    private static final String DEPARTURE_AIRPORT_PARAM = "departure";
-    private static final String DESTINATION_AIRPORT_PARAM = "destination";
+    private static final String DEPARTURE_AIRPORT_PARAM = "firstIata";
+    private static final String DESTINATION_AIRPORT_PARAM = "secondIata";
 
     private final AirportsProvider airportsProvider;
 
