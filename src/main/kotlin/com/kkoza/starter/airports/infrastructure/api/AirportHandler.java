@@ -24,6 +24,7 @@ public class AirportHandler {
         this.airportsProvider = airportsProvider;
     }
 
+    @NotNull
     Mono<ServerResponse> getConnections(ServerRequest request) {
         String departure = getQueryParamFromRequest(request, DEPARTURE_AIRPORT_PARAM); // i put my trust in the client
         String destination = getQueryParamFromRequest(request, DESTINATION_AIRPORT_PARAM);
@@ -42,7 +43,7 @@ public class AirportHandler {
     }
 
     @NotNull
-    public Mono<ServerResponse> getAirports(ServerRequest request) {
+    Mono<ServerResponse> getAirports(ServerRequest request) {
         Mono<List<AirportDto>> airportsDto = airportsProvider.getAllAirports()
                 .map(this::mapToAirportDto)
                 .collectList();

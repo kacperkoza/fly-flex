@@ -42,7 +42,6 @@ class ConnectionsClient : ConnectionsProvider {
                 .bodyToMono(ConnectionsDto::class.java)
                 .toFlux()
                 .flatMap { connectionsDto -> mapToAirports(connectionsDto) }
-
     }
 
     private fun mapToAirports(connectionsDto: ConnectionsDto): Flux<Airport> {
