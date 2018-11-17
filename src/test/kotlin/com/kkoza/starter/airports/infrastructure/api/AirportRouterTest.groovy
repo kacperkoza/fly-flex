@@ -24,4 +24,21 @@ class AirportRouterTest extends BaseIntegrationTest {
         }
     }
 
+    def 'should return all available airports'() {
+        given:
+        stubRyanairAirports("airports.json")
+
+        when:
+        AirportResponse response = restTemplate.getForEntity(localUrl("/airports"), AirportResponse.class).body
+
+        then:
+        with(response) {
+            airports.size() == 4
+            airports.get(0).iataCode == 'VNO'
+            airports.get(0).name == 'Wilno'
+            airports.get(2).iataCode == 'ENG'
+            airports.get(2).name == 'Wielka Brytania'
+        }
+    }
+
 }

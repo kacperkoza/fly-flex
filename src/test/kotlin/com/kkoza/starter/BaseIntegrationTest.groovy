@@ -47,4 +47,16 @@ class BaseIntegrationTest extends Specification {
         )
     }
 
+    def stubRyanairAirports(String bodyFile) {
+        ryanairRule.stubFor(
+                get(urlPathMatching('https://api.ryanair.com/aggregate/4/common'))
+                        .willReturn(
+                        aResponse()
+                                .withStatus(200)
+                                .withHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
+                                .withBodyFile("ryanair/$bodyFile")
+                )
+        )
+    }
+
 }

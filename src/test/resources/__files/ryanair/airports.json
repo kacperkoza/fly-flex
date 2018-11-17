@@ -1,0 +1,20 @@
+{
+  "airports": [
+    {
+      "iataCode": "VNO",
+      "name": "Wilno"
+    },
+    {
+      "iataCode": "POL",
+      "name": "Polska"
+    },
+    {
+      "iataCode": "ENG",
+      "name": "Wielka Brytania"
+    },
+    {
+      "iataCode": "FCO",
+      "name": "Rzym-Fiumcino"
+    }
+  ]
+}
