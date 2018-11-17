@@ -1,9 +1,9 @@
 package com.kkoza.starter.airports.infrastructure.client.ryanair
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties
+import com.fasterxml.jackson.annotation.JsonProperty
 import com.kkoza.starter.airports.Airport
 import com.kkoza.starter.airports.AirportClient
-import com.kkoza.starter.airports.infrastructure.api.dto.AirportDto
-import org.springframework.beans.factory.annotation.Value
 import reactor.core.publisher.Flux
 
 class RyanAirAirportClient(
@@ -16,14 +16,22 @@ class RyanAirAirportClient(
     override fun getAllAirports(): Flux<Airport> {
         return ryanAirClient.request(
                 path,
-                AirportDtoList::class.java
+                AirportsInfo::class.java
         ) { airportDtoList -> mapAirportDtoToAirport(airportDtoList) }
     }
 
-    private fun mapAirportDtoToAirport(airportsInfo: AirportDtoList): Flux<Airport> {
+    private fun mapAirportDtoToAirport(airportsInfo: AirportsInfo): Flux<Airport> {
         val airports = airportsInfo.airports.map { Airport(it.iataCode, it.name) }
         return Flux.fromIterable(airports)
     }
 }
 
-data class AirportDtoList(val airports: List<AirportDto>)
+@JsonIgnoreProperties(ignoreUnknown = true)
+data class AirportsInfo(
+        @JsonProperty("airports")
+        val airports: List<ProviderAirportInfo>)
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+data class ProviderAirportInfo(
+        val iataCode: String,
+        val name: String)
