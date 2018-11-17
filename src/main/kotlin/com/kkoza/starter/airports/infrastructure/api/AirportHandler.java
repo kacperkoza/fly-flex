@@ -2,6 +2,7 @@ package com.kkoza.starter.airports.infrastructure.api;
 
 import com.kkoza.starter.airports.Airport;
 import com.kkoza.starter.airports.AirportsProvider;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.BodyInserters;
@@ -23,7 +24,6 @@ public class AirportHandler {
         this.airportsProvider = airportsProvider;
     }
 
-    @org.jetbrains.annotations.NotNull
     Mono<ServerResponse> getConnections(ServerRequest request) {
         String departure = getQueryParamFromRequest(request, DEPARTURE_AIRPORT_PARAM); // i put my trust in the client
         String destination = getQueryParamFromRequest(request, DESTINATION_AIRPORT_PARAM);
@@ -41,7 +41,8 @@ public class AirportHandler {
                 .body(BodyInserters.fromPublisher(response, ConnectionsResponse.class));
     }
 
-    Mono<ServerResponse> getAirports(ServerRequest request) {
+    @NotNull
+    public Mono<ServerResponse> getAirports(ServerRequest request) {
         Mono<List<AirportDto>> airportsDto = airportsProvider.getAllAirports()
                 .map(this::mapToAirportDto)
                 .collectList();
@@ -53,6 +54,7 @@ public class AirportHandler {
                 .body(BodyInserters.fromPublisher(airports, AirportResponse.class));
     }
 
+    @NotNull
     private String getQueryParamFromRequest(ServerRequest request, String departureAirportParam) {
         return request.queryParam(departureAirportParam).get();
     }

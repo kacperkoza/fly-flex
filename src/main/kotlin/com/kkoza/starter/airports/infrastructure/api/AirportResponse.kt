@@ -1,3 +1,3 @@
 package com.kkoza.starter.airports.infrastructure.api
 
-class AirportResponse(airports: List<AirportDto>)
+class AirportResponse(val airports: List<AirportDto>)
