@@ -33,4 +33,7 @@ public class AirportsProvider {
         return CollectionUtils.intersection(departure, destination);
     }
 
+    public Flux<Airport> getAllAirports() {
+        return Flux.empty();
+    }
 }
