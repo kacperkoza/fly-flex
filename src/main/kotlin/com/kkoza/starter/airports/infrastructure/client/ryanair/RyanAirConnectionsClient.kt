@@ -18,7 +18,7 @@ class RyanairConnectionsClient(
     }
 
     override fun getConnections(iataCode: String): Flux<Airport> {
-        return ryanAirClient.request(
+        return ryanAirClient.requestFlux(
                 "$path?$DEPARTURE_AIRPORT_IATA_CODE=$iataCode&$BASE_PARAMS",
                 ConnectionsDto::class.java
         ) { connectionsDto: ConnectionsDto -> mapToAirports(connectionsDto) }

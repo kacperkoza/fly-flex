@@ -17,7 +17,7 @@ class RyanAirAirportClient(
     private val path = "$url/aggregate/4/common?embedded=airports&market=pl-pl"
 
     override fun getAllAirports(): Flux<Airport> {
-        return ryanAirClient.request(
+        return ryanAirClient.requestFlux(
                 path,
                 AirportsInfo::class.java
         ) { airportDtoList -> mapAirportDtoToAirport(airportDtoList) }

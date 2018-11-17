@@ -6,7 +6,7 @@ import org.springframework.http.MediaType
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.client.WebClient
 import reactor.core.publisher.Flux
-import reactor.core.publisher.toFlux
+import reactor.core.publisher.Mono
 import java.net.URI
 
 @Component
@@ -16,7 +16,22 @@ class RyanAirClient {
 
     private val webClient: WebClient = WebClient.create()
 
-    fun <T : Any, R> request(path: String, bodyType: Class<T>, mapper: (T) -> Flux<R>): Flux<R> {
+    fun <T : Any, R> requestFlux(path: String, bodyType: Class<T>, mapper: (T) -> Flux<R>): Flux<R> {
+
+        return request(path)
+                .bodyToFlux(bodyType)
+                .flatMap { responseBody -> mapper.invoke(responseBody) }
+    }
+
+    fun <T : Any, R> requestMono(path: String, bodyType: Class<T>, mapper: (T) -> Mono<R>): Mono<R> {
+
+        return request(path)
+                .bodyToMono(bodyType)
+                .flatMap { responseBody -> mapper.invoke(responseBody) }
+    }
+
+    private fun request(path: String): WebClient.ResponseSpec {
+
         return webClient
                 .get()
                 .uri { URI(path) }
@@ -30,11 +45,7 @@ class RyanAirClient {
                     logger.error("Connections client error")
                     throw ConnectionsClientException("Status ${clientResponse.statusCode().value()}")
                 }
-                .bodyToMono(bodyType)
-                .toFlux()
-                .flatMap { responseBody -> mapper.invoke(responseBody) }
     }
-
 }
 
 class ConnectionsClientException(message: String) : RuntimeException(message)
