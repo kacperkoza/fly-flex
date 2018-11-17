@@ -1,7 +1,8 @@
-package com.kkoza.starter.connections.infrastructure.api
+package com.kkoza.starter.airports.infrastructure.api
 
 data class ConnectionsResponse(
-        val airport: AirportDto,
+        val departureIata: String,
+        val destinationIata: String,
         val connections: List<AirportDto>
 )
 

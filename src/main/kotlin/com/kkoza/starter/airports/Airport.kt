@@ -1,4 +1,4 @@
-package com.kkoza.starter.connections
+package com.kkoza.starter.airports
 
 data class Airport(
         val iataCode: String,
