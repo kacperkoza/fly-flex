@@ -4,11 +4,14 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.kkoza.starter.airports.Airport
 import com.kkoza.starter.airports.AirportClient
+import org.springframework.beans.factory.annotation.Value
+import org.springframework.stereotype.Component
 import reactor.core.publisher.Flux
 
+@Component
 class RyanAirAirportClient(
         private val ryanAirClient: RyanAirClient,
-        url: String
+        @Value("\${ryanair.url}") url: String
 ) : AirportClient {
 
     private val path = "$url/aggregate/4/common?embedded=airports&market=pl-pl"

@@ -3,11 +3,13 @@ package com.kkoza.starter.airports.infrastructure.client.ryanair
 import org.slf4j.LoggerFactory
 import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType
+import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.client.WebClient
 import reactor.core.publisher.Flux
 import reactor.core.publisher.toFlux
 import java.net.URI
 
+@Component
 class RyanAirClient {
 
     private val logger = LoggerFactory.getLogger(RyanAirClient::class.java)

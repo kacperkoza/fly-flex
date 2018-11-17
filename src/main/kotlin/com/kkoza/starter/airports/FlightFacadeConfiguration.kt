@@ -27,5 +27,4 @@ class FlightFacadeConfiguration {
         return FlightFacade(airportsProvider, lowestFareCalendarFinder)
     }
 
-
 }
