@@ -1,6 +1,5 @@
-package com.kkoza.starter.airports.infrastructure;
+package com.kkoza.starter.airports;
 
-import com.kkoza.starter.airports.Airport;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
 

@@ -1,6 +1,5 @@
-package com.kkoza.starter.airports.infrastructure;
+package com.kkoza.starter.airports;
 
-import com.kkoza.starter.airports.Airport;
 import reactor.core.publisher.Flux;
 
 public interface AirportProvider {
