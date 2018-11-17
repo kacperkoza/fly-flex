@@ -10,19 +10,18 @@ import org.springframework.web.reactive.function.server.ServerResponse;
 @Configuration
 public class AirportRouter {
 
-    private final ConnectionsHandler connectionsHandler;
+    private final AirportHandler airportHandler;
 
-    public AirportRouter(ConnectionsHandler connectionsHandler) {
-        this.connectionsHandler = connectionsHandler;
+    public AirportRouter(AirportHandler airportHandler) {
+        this.airportHandler = airportHandler;
     }
 
     @Bean
     public RouterFunction<ServerResponse> getConnections() {
         return RouterFunctions.route(
                 RequestPredicates.GET("/connections"),
-                connectionsHandler::getConnections
+                airportHandler::getConnections
         );
     }
-
 
 }

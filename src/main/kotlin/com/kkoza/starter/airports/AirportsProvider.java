@@ -1,20 +1,20 @@
 package com.kkoza.starter.airports;
 
-import com.kkoza.starter.airports.infrastructure.AirportClient;
+import com.kkoza.starter.airports.infrastructure.AirportProvider;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
 
 @Component
 public class AirportsProvider {
 
-    private final AirportClient airportClient;
+    private final AirportProvider airportProvider;
 
-    public AirportsProvider(AirportClient airportClient) {
-        this.airportClient = airportClient;
+    public AirportsProvider(AirportProvider airportProvider) {
+        this.airportProvider = airportProvider;
     }
 
     public Flux<Airport> getConnections(String departure, String destination) {
-        return airportClient.getConnections(departure, destination);
+        return airportProvider.getConnections(departure, destination);
     }
 
 }
