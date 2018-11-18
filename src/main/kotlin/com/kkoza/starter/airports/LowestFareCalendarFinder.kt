@@ -77,15 +77,17 @@ class LowestFareCalendarFinder(
                         val oneWayB = faresOneWayB[secondStartDateIndex]
                         val returnB = faresReturnB[secondEndDateIndex]
 
-                        if (oneWayA.price == null || returnA.price == null || oneWayB.price == null || returnB.price == null)
+                        if (!allHasPrice(oneWayA, returnA, oneWayB, returnB))
                             continue
                         flightsHolder.add(FlightPairHolder(oneWayA, returnA, oneWayB, returnB))
                     }
                 }
             }
         }
+
         val flights = flightsHolder.stream()
                 .sorted { o1, o2 -> o1.calculateTripCost() - o2.calculateTripCost() }
+                .filter { flightPair: FlightPairHolder -> hasOverlappingTripDates(flightPair) }
                 .limit(LIMIT_OF_ROUTES)
                 .collect(Collectors.toList())
 
@@ -105,6 +107,13 @@ class LowestFareCalendarFinder(
                 )
         )
     }
+
+    private fun allHasPrice(oneWayA: FlightInfo, returnA: FlightInfo, oneWayB: FlightInfo, returnB: FlightInfo) =
+            oneWayA.price != null && returnA.price != null && oneWayB.price != null && returnB.price != null
+
+    private fun hasOverlappingTripDates(flightPair: FlightPairHolder) =
+            flightPair.oneWayA.date <= flightPair.returnB.date &&
+                    flightPair.returnA.date >= flightPair.oneWayB.date
 
     private fun toRoundTrip(oneWay: FlightInfo, returnWay: FlightInfo): RoundTrip {
         return RoundTrip(oneWay, returnWay)
