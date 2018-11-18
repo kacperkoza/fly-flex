@@ -1,6 +1,8 @@
 package com.kkoza.starter.airports
 
 import com.kkoza.starter.airports.infrastructure.api.SearchParams
+import com.kkoza.starter.airports.infrastructure.client.ryanair.RyanAirClient
+import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
@@ -11,12 +13,39 @@ import java.util.stream.Collectors
 @Component
 class LowestFareCalendarFinder(
         private val fareCalendarClient: FareCalendarClient,
-        private val airportClient: AirportClient
+        private val airportClient: AirportClient,
+        private val airportsProvider: AirportsProvider
 ) {
+
+    private val logger = LoggerFactory.getLogger(LowestFareCalendarFinder::class.java)
+
 
     companion object {
         private const val LIMIT_OF_ROUTES = 10L
     }
+
+
+    fun findLowestFaresV2(firstIata: String, secondIata: String, searchParams: SearchParams): Flux<RoutesV2> {
+        val connections = airportsProvider.getConnections(firstIata, secondIata)
+
+        return connections
+                .flatMap {
+                    val destinationIata = it.iataCode
+                    findLowestFares(firstIata, secondIata, destinationIata, searchParams)
+                }
+                .map { routes ->
+                    val firstAirport = routes.firstRoundTrip.departureAirport
+                    val secondAiport = routes.secondRoundTrip.departureAirport
+                    val destination = routes.firstRoundTrip.arrivalAirport
+                    RoutesV2(
+                            FlightsV2(routes.firstRoundTrip.flights.map { RoundTripV2(firstAirport, destination, it.oneWay, it.returnWay) }),
+                            FlightsV2(routes.secondRoundTrip.flights.map { RoundTripV2(secondAiport, destination, it.oneWay, it.returnWay) })
+
+                    )
+                }
+
+    }
+
 
     fun findLowestFares(firstIata: String, secondIata: String, destinationIata: String, searchParams: SearchParams): Mono<Routes> {
         return Flux.zip(

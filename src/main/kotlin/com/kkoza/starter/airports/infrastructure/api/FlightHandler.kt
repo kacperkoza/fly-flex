@@ -12,6 +12,7 @@ import org.springframework.web.reactive.function.BodyInserters
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import reactor.core.publisher.Mono
+import reactor.core.publisher.toMono
 
 @Component
 class FlightHandler(private val flightFacade: FlightFacade) {
@@ -65,6 +66,44 @@ class FlightHandler(private val flightFacade: FlightFacade) {
                 .body(BodyInserters.fromPublisher(
                         routes,
                         RouteResponse::class.java))
+    }
+
+    fun findConnectionsAndGetRoutes(request: ServerRequest): Mono<ServerResponse> {
+        val firstIata = request.queryParam(FIRST_IATA_PARAM).orElseThrow { RuntimeException("Gimme firstIata") }
+        val secondIata = request.queryParam(SECOND_IATA_PARAM).orElseThrow { RuntimeException("Gimme secondIata") }
+        val offset = request.queryParam(OFFSET_PARAM).orElse("1").toInt()
+        val tripLength = request.queryParam(TRIP_LENGTH_PARAM).orElse("5").toInt()
+
+        val routes: Mono<RouteResponse> = flightFacade.findConnectionsAndGetRoutes(firstIata, secondIata, SearchParams(tripLength, offset))
+                .map { routes ->
+                    if (routes.firstRoundTrip.flights.isEmpty()) RouteResponse(emptyList())
+                    val secondFlights = routes.secondRoundTrip.flights
+                    val departureAirport = routes.firstRoundTrip.flights[0].departureAirport
+                    val secondDepartureAirport = routes.secondRoundTrip.flights[0].departureAirport
+                    val mutualArrivalAiport = routes.firstRoundTrip.flights[0].arrivalAirport
+                    val flights = routes.firstRoundTrip.flights.mapIndexed { index, roundTripV2 ->
+                        val secondTrip = secondFlights[index]
+                        RouteDto(
+                                RoutePlanDto(
+                                        mapToAirportDTO(departureAirport),
+                                        mapToAirportDTO(mutualArrivalAiport),
+                                        FlightDatesDto(formatDate(roundTripV2.oneWay.date), formatDate(roundTripV2.returnWay.date)),
+                                        FlightPriceDto(roundTripV2.oneWay.price!!, roundTripV2.returnWay.price!!)),
+                                RoutePlanDto(
+                                        mapToAirportDTO(secondDepartureAirport),
+                                        mapToAirportDTO(mutualArrivalAiport),
+                                        FlightDatesDto(formatDate(secondTrip.oneWay.date), formatDate(secondTrip.returnWay.date)),
+                                        FlightPriceDto(secondTrip.oneWay.price!!, secondTrip.returnWay.price!!)
+                                )
+
+                        )
+                    }
+                    RouteResponse(flights)
+                }.filter { it.routes.isNotEmpty() }
+                .toMono()
+
+
+        return ServerResponse.ok().body(BodyInserters.fromPublisher(routes, RouteResponse::class.java))
     }
 
     private fun mapToRoutes(routes: Routes): RouteResponse {

@@ -31,4 +31,13 @@ class AirportRouter(private val flightHandler: FlightHandler) {
                     HandlerFunction<ServerResponse> { flightHandler.getRoutes(it) }
             )
 
+
+    @Bean
+    fun RoutesV2() =
+            RouterFunctions.route(
+                    RequestPredicates.GET("/routesV2"),
+                    HandlerFunction<ServerResponse> { flightHandler.findConnectionsAndGetRoutes(it) }
+            )
+
+
 }
