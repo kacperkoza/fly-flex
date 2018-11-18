@@ -29,6 +29,9 @@ class RyanAirAirportCachedClient(
                 .collectList()
                 .block()!!
                 .toList()
+                .sortedBy {
+                    it.cityName
+                }
 
         this.airports = airports
         this.airportByIataCode = airports
