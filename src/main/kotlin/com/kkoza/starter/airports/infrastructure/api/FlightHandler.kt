@@ -25,9 +25,8 @@ class FlightHandler(private val flightFacade: FlightFacade) {
     }
 
     fun getConnections(request: ServerRequest): Mono<ServerResponse> {
-        val firstIata = getQueryParamFromRequest(request, FIRST_IATA_PARAM) // i put my trust in the client
-        val secondIata = getQueryParamFromRequest(request, SECOND_IATA_PARAM)
-
+        val firstIata = request.queryParam(FIRST_IATA_PARAM).orElseThrow { RuntimeException("gimme firstIata") }
+        val secondIata = request.queryParam(SECOND_IATA_PARAM).orElseThrow { RuntimeException("Gimme secondIata") }
         val response = flightFacade.getConnections(firstIata, secondIata)
                 .map { this.mapToAirportDto(it) }
                 .collectList()
@@ -51,11 +50,13 @@ class FlightHandler(private val flightFacade: FlightFacade) {
     }
 
     fun getRoutes(request: ServerRequest): Mono<ServerResponse> {
-        val firstIata = getQueryParamFromRequest(request, FIRST_IATA_PARAM)
-        val secondIata = getQueryParamFromRequest(request, SECOND_IATA_PARAM)
-        val destinationIata = getQueryParamFromRequest(request, DESTINATION_IATA_PARAM)
+        val firstIata = request.queryParam(FIRST_IATA_PARAM).orElseThrow { RuntimeException("Gimme firstIata") }
+        val secondIata = request.queryParam(SECOND_IATA_PARAM).orElseThrow { RuntimeException("Gimme secondIata") }
+        val destinationIata = request.queryParam(DESTINATION_IATA_PARAM).orElseThrow { RuntimeException("Gimme destinationIata") }
+        val offset = request.queryParam(OFFSET_PARAM).orElse("1").toInt()
+        val tripLength = request.queryParam(OFFSET_PARAM).orElse("5").toInt()
 
-        val routes = flightFacade.findRoutes(firstIata, secondIata, destinationIata)
+        val routes = flightFacade.findRoutes(firstIata, secondIata, destinationIata, SearchParams(tripLength, offset))
                 .map { this.mapToRoutes(it) }
 
         return ServerResponse
@@ -96,10 +97,6 @@ class FlightHandler(private val flightFacade: FlightFacade) {
 
     private fun mapToAirportDTO(airport: Airport): AirportPlanDto = AirportPlanDto(airport.cityName, airport.iataCode)
 
-
-    private fun getQueryParamFromRequest(request: ServerRequest, departureAirportParam: String): String {
-        return request.queryParam(departureAirportParam).get()
-    }
 
     private fun mapToAirportResponse(connections: List<AirportDto>, departure: String, destination: String): ConnectionsResponse {
         return ConnectionsResponse(departure, destination, connections)
