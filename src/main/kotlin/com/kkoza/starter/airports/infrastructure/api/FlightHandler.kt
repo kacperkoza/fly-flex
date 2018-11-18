@@ -88,12 +88,12 @@ class FlightHandler(private val flightFacade: FlightFacade) {
                                         mapToAirportDTO(departureAirport),
                                         mapToAirportDTO(mutualArrivalAiport),
                                         FlightDatesDto(formatDate(roundTripV2.oneWay.date), formatDate(roundTripV2.returnWay.date)),
-                                        FlightPriceDto(roundTripV2.oneWay.price!!, roundTripV2.returnWay.price!!)),
+                                        FlightPriceDto(roundTripV2.oneWay.price!!, roundTripV2.returnWay.price!!, roundTripV2.oneWay.currency)),
                                 RoutePlanDto(
                                         mapToAirportDTO(secondDepartureAirport),
                                         mapToAirportDTO(mutualArrivalAiport),
                                         FlightDatesDto(formatDate(secondTrip.oneWay.date), formatDate(secondTrip.returnWay.date)),
-                                        FlightPriceDto(secondTrip.oneWay.price!!, secondTrip.returnWay.price!!)
+                                        FlightPriceDto(secondTrip.oneWay.price!!, secondTrip.returnWay.price!!, roundTripV2.oneWay.currency)
                                 )
 
                         )
