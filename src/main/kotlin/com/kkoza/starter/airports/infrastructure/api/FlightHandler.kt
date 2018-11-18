@@ -54,7 +54,7 @@ class FlightHandler(private val flightFacade: FlightFacade) {
         val secondIata = request.queryParam(SECOND_IATA_PARAM).orElseThrow { RuntimeException("Gimme secondIata") }
         val destinationIata = request.queryParam(DESTINATION_IATA_PARAM).orElseThrow { RuntimeException("Gimme destinationIata") }
         val offset = request.queryParam(OFFSET_PARAM).orElse("1").toInt()
-        val tripLength = request.queryParam(OFFSET_PARAM).orElse("5").toInt()
+        val tripLength = request.queryParam(TRIP_LENGTH_PARAM).orElse("5").toInt()
 
         val routes = flightFacade.findRoutes(firstIata, secondIata, destinationIata, SearchParams(tripLength, offset))
                 .map { this.mapToRoutes(it) }

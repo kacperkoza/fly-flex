@@ -19,7 +19,7 @@ public class IndexingTestJava {
         }
 
         int offset = 1;
-        int tripLength = 6;
+        int tripLength = 7;
 
         List<Pair> pairs = new ArrayList<>();
 
@@ -28,18 +28,26 @@ public class IndexingTestJava {
             for (int firstEndDateIndexOffset = -offset; firstEndDateIndexOffset <= offset; firstEndDateIndexOffset++) {
                 for (int secondStartDateIndexOffset = -offset; secondStartDateIndexOffset <= 0; secondStartDateIndexOffset++) {
                     for (int secondEndDateIndexOffset = -offset; secondEndDateIndexOffset <= 0; secondEndDateIndexOffset++) {
-                        if (startDateIndex + tripLength + firstEndDateIndexOffset > firstRange.size()) {
+                        if (startDateIndex + tripLength + firstEndDateIndexOffset + 1 > firstRange.size()) {
                             break;
                         }
 
-                        if (startDateIndex + tripLength + secondEndDateIndexOffset > secondRange.size()) {
+                        if (startDateIndex + tripLength + secondEndDateIndexOffset + 1 > secondRange.size()) {
                             break;
                         }
 
                         if (startDateIndex + secondStartDateIndexOffset < 0) {
                             continue;
                         }
-                        // LOGIKA
+                        int firstStartDateIndex = startDateIndex;
+                        int secondStartDateIndex = startDateIndex + secondStartDateIndexOffset;
+                        int firstEndDateIndex = startDateIndex + firstEndDateIndexOffset + tripLength;
+                        int secondEndDateIndex = startDateIndex + secondStartDateIndexOffset + secondEndDateIndexOffset + tripLength;
+
+                        IndexPair indexPair = new IndexPair(firstRange.get(firstStartDateIndex), firstRange.get(firstEndDateIndex));
+                        IndexPair indexPair1 = new IndexPair(secondRange.get(secondStartDateIndex), secondRange.get(secondEndDateIndex));
+                        Pair pair = new Pair(indexPair, indexPair1);
+                        System.out.println(pair);
                     }
                 }
             }

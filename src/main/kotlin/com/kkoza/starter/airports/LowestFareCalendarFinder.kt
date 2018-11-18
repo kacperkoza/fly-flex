@@ -40,7 +40,7 @@ class LowestFareCalendarFinder(
                                    secondReturnCalendar: FareCalendar,
                                    searchParams: SearchParams
     ): Mono<Routes> {
-        val tripLength = searchParams.tripLength - searchParams.offset
+        val tripLength = searchParams.tripLength
         val offset = searchParams.offset
 
         val faresOneWayA = firstCalendar.fares
@@ -48,18 +48,41 @@ class LowestFareCalendarFinder(
         val faresOneWayB = secondOneWayCalendar.fares
         val faresReturnB = secondReturnCalendar.fares
         checkSizeSame(faresOneWayA, faresReturnA, faresOneWayB, faresReturnB)
-        val iterations = faresOneWayA.size - tripLength - offset
+        val iterations = faresOneWayA.size
 
         val flightsHolder = mutableListOf<FlightPairHolder>()
 
-        for (i in 0 until iterations) {
-            val oneWayA = faresOneWayA[i]
-            val returnA = faresReturnA[i + LENGTH_OF_STAY_IN_DAYS]
-            val oneWayB = faresOneWayB[i]
-            val returnB = faresReturnB[i + LENGTH_OF_STAY_IN_DAYS]
-            if (oneWayA.price == null || returnA.price == null || oneWayB.price == null || returnB.price == null)
-                continue
-            flightsHolder.add(FlightPairHolder(oneWayA, returnA, oneWayB, returnB))
+        for (startDateIndex in 0 until iterations) {
+            for (firstEndDateIndexOffset in -offset..offset) {
+                for (secondStartDateIndexOffset in -offset..0) {
+                    for (secondEndDateIndexOffset in -offset..0) {
+                        if (startDateIndex + tripLength + firstEndDateIndexOffset + 1 > faresOneWayA.size) {
+                            break
+                        }
+
+                        if (startDateIndex + tripLength + secondEndDateIndexOffset + secondStartDateIndexOffset + 1 > faresOneWayB.size) {
+                            break
+                        }
+
+                        if (startDateIndex + secondStartDateIndexOffset < 0) {
+                            continue
+                        }
+                        val firstStartDateIndex = startDateIndex
+                        val secondStartDateIndex = startDateIndex + secondStartDateIndexOffset
+                        val firstEndDateIndex = startDateIndex + firstEndDateIndexOffset + tripLength
+                        val secondEndDateIndex = startDateIndex + secondStartDateIndexOffset + secondEndDateIndexOffset + tripLength
+
+                        val oneWayA = faresOneWayA[firstStartDateIndex]
+                        val returnA = faresReturnA[firstEndDateIndex]
+                        val oneWayB = faresOneWayB[secondStartDateIndex]
+                        val returnB = faresReturnB[secondEndDateIndex]
+
+                        if (oneWayA.price == null || returnA.price == null || oneWayB.price == null || returnB.price == null)
+                            continue
+                        flightsHolder.add(FlightPairHolder(oneWayA, returnA, oneWayB, returnB))
+                    }
+                }
+            }
         }
         val flights = flightsHolder.stream()
                 .sorted { o1, o2 -> o1.calculateTripCost() - o2.calculateTripCost() }
@@ -87,6 +110,12 @@ class LowestFareCalendarFinder(
         return RoundTrip(oneWay, returnWay)
     }
 
+    private fun getAirport(iataCode: String) = airportClient.getByIataCode(iataCode)
+
+    private fun checkSizeSame(faresOneWayA: List<FlightInfo>, faresReturnA: List<FlightInfo>, faresOneWayB: List<FlightInfo>, faresReturnB: List<FlightInfo>) {
+        if (faresOneWayA.size != faresReturnA.size || faresOneWayB.size != faresReturnB.size)
+            throw IllegalStateException("Kamil miałeś niczego nie filtrować")
+    }
 }
 
 private data class FlightPairHolder(
