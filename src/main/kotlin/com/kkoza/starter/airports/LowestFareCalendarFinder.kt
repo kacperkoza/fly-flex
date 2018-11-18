@@ -1,13 +1,17 @@
 package com.kkoza.starter.airports
 
+import com.kkoza.starter.airports.infrastructure.client.ryanair.RyanAirAirportCachedClient
+import org.springframework.stereotype.Component
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 import reactor.core.publisher.toMono
 import java.util.stream.Collectors
 
 
+@Component
 class LowestFareCalendarFinder(
-        private val fareCalendarClient: FareCalendarClient
+        private val fareCalendarClient: FareCalendarClient,
+        private val airportClient: AirportClient
 ) {
 
     companion object {
@@ -80,7 +84,7 @@ class LowestFareCalendarFinder(
         )
     }
 
-    private fun getAirport(iataCode: String) = AirportsCache.AIRPORTS_MAP[iataCode]!!
+    private fun getAirport(iataCode: String) = airportClient.getByIataCode(iataCode)
 
     private fun toRoundTrip(oneWay: FlightInfo, returnWay: FlightInfo): RoundTrip {
         return RoundTrip(oneWay, returnWay)

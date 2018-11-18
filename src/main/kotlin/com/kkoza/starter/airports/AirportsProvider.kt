@@ -1,8 +1,10 @@
 package com.kkoza.starter.airports
 
 import org.apache.commons.collections4.CollectionUtils
+import org.springframework.stereotype.Component
 import reactor.core.publisher.Flux
 
+@Component
 class AirportsProvider(private val airportConnectionsClient: AirportConnectionsClient,
                        private val airportClient: AirportClient) {
 

@@ -17,21 +17,18 @@ class RyanAirClient {
     private val webClient: WebClient = WebClient.create()
 
     fun <T : Any, R> requestFlux(path: String, bodyType: Class<T>, mapper: (T) -> Flux<R>): Flux<R> {
-
         return request(path)
                 .bodyToFlux(bodyType)
                 .flatMap { responseBody -> mapper.invoke(responseBody) }
     }
 
     fun <T : Any, R> requestMono(path: String, bodyType: Class<T>, mapper: (T) -> Mono<R>): Mono<R> {
-
         return request(path)
                 .bodyToMono(bodyType)
                 .flatMap { responseBody -> mapper.invoke(responseBody) }
     }
 
     private fun request(path: String): WebClient.ResponseSpec {
-
         return webClient
                 .get()
                 .uri { URI(path) }

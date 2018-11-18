@@ -13,8 +13,13 @@ class RyanAirAirportClient(
         private val ryanAirClient: RyanAirClient,
         @Value("\${ryanair.url}") url: String
 ) : AirportClient {
-
     private val path = "$url/aggregate/4/common?embedded=airports&market=pl-pl"
+
+    override fun getByIataCode(iataCode: String): Airport {
+        return getAllAirports().collectList()
+                .block()!!
+                .find { it.iataCode == iataCode }!!
+    }
 
     override fun getAllAirports(): Flux<Airport> {
         return ryanAirClient.requestFlux(

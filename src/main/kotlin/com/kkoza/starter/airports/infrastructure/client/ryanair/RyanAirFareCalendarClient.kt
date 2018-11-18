@@ -6,11 +6,14 @@ import com.kkoza.starter.airports.FareCalendar
 import com.kkoza.starter.airports.FareCalendarClient
 import com.kkoza.starter.airports.FlightInfo
 import org.joda.time.DateTime
+import org.springframework.beans.factory.annotation.Value
+import org.springframework.stereotype.Component
 import reactor.core.publisher.Mono
 
+@Component
 class RyanAirFareCalendarClient(
         private val ryanAirClient: RyanAirClient,
-        url: String
+        @Value("\${ryanair.url}") url: String
 ) : FareCalendarClient {
     private val path = "$url/farefinder/3/oneWayFares"
 

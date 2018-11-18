@@ -3,11 +3,14 @@ package com.kkoza.starter.airports.infrastructure.client.ryanair
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.kkoza.starter.airports.Airport
 import com.kkoza.starter.airports.AirportConnectionsClient
+import org.springframework.beans.factory.annotation.Value
+import org.springframework.stereotype.Component
 import reactor.core.publisher.Flux
 
+@Component
 class RyanairConnectionsClient(
         private val ryanAirClient: RyanAirClient,
-        url: String
+        @Value("\${ryanair.url}") url: String
 ) : AirportConnectionsClient {
 
     private val path = "$url/farefinder/3/oneWayFares"

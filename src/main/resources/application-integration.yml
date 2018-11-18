@@ -1,2 +1,5 @@
 ryanair:
   url: 'http://localhost:8089'
+
+cache:
+  enabled: false

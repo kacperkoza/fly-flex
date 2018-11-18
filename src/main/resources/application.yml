@@ -3,3 +3,6 @@ application:
 
 ryanair:
   url: 'https://api.ryanair.com'
+
+cache:
+  enabled: true

@@ -1,6 +1,9 @@
 package com.kkoza.starter.airports
 
+import org.springframework.stereotype.Component
 
+
+@Component
 class FlightFacade(
         private val airportsProvider: AirportsProvider,
         private val lowestFareCalendarFinder: LowestFareCalendarFinder

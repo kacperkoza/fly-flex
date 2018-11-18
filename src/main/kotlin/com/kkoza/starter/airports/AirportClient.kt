@@ -6,4 +6,6 @@ interface AirportClient {
 
     fun getAllAirports(): Flux<Airport>
 
+    fun getByIataCode(iataCode: String): Airport
+
 }
