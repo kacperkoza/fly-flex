@@ -76,7 +76,8 @@ class FlightHandler(private val flightFacade: FlightFacade) {
 
         val routes: Mono<RouteResponse> = flightFacade.findConnectionsAndGetRoutes(firstIata, secondIata, SearchParams(tripLength, offset))
                 .map { routes ->
-                    if (routes.firstRoundTrip.flights.isEmpty()) RouteResponse(emptyList())
+                    if (routes.firstRoundTrip.flights.isEmpty())
+                        return@map RouteResponse(emptyList())
                     val secondFlights = routes.secondRoundTrip.flights
                     val departureAirport = routes.firstRoundTrip.flights[0].departureAirport
                     val secondDepartureAirport = routes.secondRoundTrip.flights[0].departureAirport

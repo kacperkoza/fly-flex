@@ -21,7 +21,7 @@ class LowestFareCalendarFinder(
 
 
     companion object {
-        private const val LIMIT_OF_ROUTES = 10L
+        private const val LIMIT_OF_ROUTES = 30L
     }
 
 
