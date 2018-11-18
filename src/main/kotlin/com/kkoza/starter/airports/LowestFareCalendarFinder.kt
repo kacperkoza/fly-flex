@@ -86,7 +86,7 @@ class LowestFareCalendarFinder(
         }
 
         val flights = flightsHolder.stream()
-                .sorted { o1, o2 -> o1.calculateTripCost() - o2.calculateTripCost() }
+                .sorted { o1, o2 -> o1.calculateTripCost().compareTo(o2.calculateTripCost()) }
                 .filter { flightPair: FlightPairHolder -> hasOverlappingTripDates(flightPair) }
                 .limit(LIMIT_OF_ROUTES)
                 .collect(Collectors.toList())

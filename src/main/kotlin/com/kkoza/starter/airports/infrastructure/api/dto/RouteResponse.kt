@@ -27,6 +27,7 @@ data class FlightDatesDto(
 )
 
 data class FlightPriceDto(
-        val oneWay: Int,
-        val returnWay: Int
+        val oneWay: Double,
+        val returnWay: Double,
+        val currency: String
 )

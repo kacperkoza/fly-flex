@@ -10,5 +10,6 @@ data class FareCalendar(
 
 data class FlightInfo(
         val date: DateTime,
-        val price: Int?
+        val price: Double?,
+        val currency: String
 )

@@ -32,7 +32,7 @@ class RyanAirFareCalendarClient(
     private fun mapToFareCalendar(departureIata: String, arrivalIata: String,
                                   calendarDto: ResponseDto): Mono<FareCalendar> {
         val flightInfos = calendarDto.outbound.fares
-                .map { FlightInfo(it.day, it.price?.valueMainUnit?.toInt()) }
+                .map { FlightInfo(it.day, it.price?.value?.toDouble(), it.price?.currencyCode ?: "unknown") }
 
         return Mono.just(FareCalendar(departureIata, arrivalIata, flightInfos))
     }
@@ -54,5 +54,6 @@ data class FareDto(
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 data class PriceDto(
-        val valueMainUnit: String?
+        val value: String?,
+        val currencyCode: String?
 )
