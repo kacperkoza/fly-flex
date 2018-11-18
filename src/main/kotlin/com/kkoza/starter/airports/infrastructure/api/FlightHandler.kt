@@ -135,7 +135,7 @@ class FlightHandler(private val flightFacade: FlightFacade) {
 
     private fun formatDate(date: DateTime) = date.toString("dd-MM-yyyy")
 
-    private fun mapToAirportDTO(airport: Airport): AirportPlanDto = AirportPlanDto(airport.cityName, airport.iataCode)
+    private fun mapToAirportDTO(airport: Airport): AirportPlanDto = AirportPlanDto(airport.iataCode, airport.cityName)
 
 
     private fun mapToAirportResponse(connections: List<AirportDto>, departure: String, destination: String): ConnectionsResponse {
