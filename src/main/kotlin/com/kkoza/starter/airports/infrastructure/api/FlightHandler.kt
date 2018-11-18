@@ -20,6 +20,8 @@ class FlightHandler(private val flightFacade: FlightFacade) {
         private const val FIRST_IATA_PARAM = "firstIata"
         private const val SECOND_IATA_PARAM = "secondIata"
         private const val DESTINATION_IATA_PARAM = "destinationIata"
+        private const val TRIP_LENGTH_PARAM = "tripLength"
+        private const val OFFSET_PARAM = "offset"
     }
 
     fun getConnections(request: ServerRequest): Mono<ServerResponse> {
@@ -111,3 +113,8 @@ class FlightHandler(private val flightFacade: FlightFacade) {
         return AirportDto(airport.cityName, airport.iataCode)
     }
 }
+
+data class SearchParams(
+        val tripLength: Int,
+        val offset: Int
+)
